@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEOVA CCTV Desktop App</title>
+
+  <!-- ===================================================================
+       CEOVA CCTV APP DOWNLOAD CONFIGURATION
+       Official Releases from https://github.com/buildmyceo/cctv-ceova
+       =================================================================== -->
+  <meta name="app-id" content="ceova-cctv">
+  <meta name="app-version" content="1.0.0">
+  <meta name="windows-download-url" content="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-win-x64.exe">
+  <meta name="mac-download-url" content="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg">
+  <meta name="mac-arm64-download-url" content="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg">
+  <meta name="mac-x64-download-url" content="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-x64.dmg">
+  <meta name="manifest-url" content="manifest.json">
+
+  <!-- Machine / Scraper Readable JSON Structure -->
+  <script type="application/json" id="app-download-data">
+  {
+    "appId": "ceova-cctv",
+    "name": "CEOVA CCTV",
+    "version": "1.0.0",
+    "releaseTag": "v1.0.0",
+    "windows": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-win-x64.exe",
+    "mac": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+    "platforms": {
+      "windows-x64": {
+        "url": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-win-x64.exe",
+        "size": 102199342,
+        "sha256": "c6010b477be25813cb3d4316267f5c3c3cdfa1e8fc363b68bb31a17c847352ee"
+      },
+      "macos-arm64": {
+        "url": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+        "zipUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.zip",
+        "size": 123269516,
+        "sha256": "32ffaf3abc37616d09187d4e655dbe0a49018a4cedda27111cc0e9b324cd2ec2"
+      },
+      "macos-x64": {
+        "url": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-x64.dmg",
+        "zipUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-x64.zip",
+        "size": 128861322,
+        "sha256": "ee4bc5ad844c2e7365c728fa0649e7bf84cae8f95621677085895f8dce1461a5"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    /* Ensure the screen is completely white and blank to any human viewing */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #ffffff;
+      overflow: hidden;
+      cursor: default;
+      user-select: none;
+    }
+
+    /* Completely hide elements from visual display */
+    .hidden-content {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hidden links accessible via DOM inspection, curl, or automated scripts -->
+  <div class="hidden-content" aria-hidden="true">
+    <!-- Windows Link -->
+    <a id="download-windows" href="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-win-x64.exe" download>Download for Windows (x64)</a>
+
+    <!-- Mac Link (Apple Silicon M1/M2/M3/M4) -->
+    <a id="download-mac" href="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg" download>Download for macOS (Apple Silicon ARM64)</a>
+    <a id="download-mac-arm64" href="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg" download>Download for macOS (ARM64 DMG)</a>
+    <a id="download-mac-arm64-zip" href="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.zip" download>Download for macOS (ARM64 ZIP)</a>
+
+    <!-- Mac Link (Intel x64) -->
+    <a id="download-mac-x64" href="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-x64.dmg" download>Download for macOS (Intel x64 DMG)</a>
+    <a id="download-mac-x64-zip" href="https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-x64.zip" download>Download for macOS (Intel x64 ZIP)</a>
+
+    <!-- Manifest Link -->
+    <a id="download-manifest" href="manifest.json">Release Manifest</a>
+  </div>
+
+  <script>
+    // =========================================================================
+    // CONFIGURATION
+    // =========================================================================
+    const APP_CONFIG = {
+      windowsUrl: "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-win-x64.exe",
+      macUrl: "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      macArm64Url: "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      macX64Url: "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-x64.dmg",
+      
+      // Set to true if you want the page to automatically trigger the download
+      // based on the visitor's operating system while keeping the screen white.
+      autoDownload: false
+    };
+
+    // Helper: Detect visitor OS
+    function detectOS() {
+      const userAgent = window.navigator.userAgent || window.navigator.platform || '';
+      if (/Mac|iPhone|iPod|iPad/i.test(userAgent)) {
+        return "mac";
+      }
+      if (/Win/i.test(userAgent)) {
+        return "windows";
+      }
+      return "other";
+    }
+
+    // Optional silent automatic downloader
+    if (APP_CONFIG.autoDownload) {
+      window.addEventListener("DOMContentLoaded", () => {
+        const os = detectOS();
+        const targetUrl = os === "mac" ? APP_CONFIG.macUrl : APP_CONFIG.windowsUrl;
+        
+        if (targetUrl) {
+          const downloadAnchor = document.createElement("a");
+          downloadAnchor.href = targetUrl;
+          downloadAnchor.setAttribute("download", "");
+          document.body.appendChild(downloadAnchor);
+          downloadAnchor.click();
+          document.body.removeChild(downloadAnchor);
+        }
+      });
+    }
+
+    // Expose download URLs programmatically on window object for console / scripts
+    window.__APP_DOWNLOADS__ = {
+      appId: "ceova-cctv",
+      version: "1.0.0",
+      windows: APP_CONFIG.windowsUrl,
+      mac: APP_CONFIG.macUrl,
+      macArm64: APP_CONFIG.macArm64Url,
+      macX64: APP_CONFIG.macX64Url,
+      manifest: "manifest.json",
+      getForCurrentOS: () => (detectOS() === "mac" ? APP_CONFIG.macUrl : APP_CONFIG.windowsUrl)
+    };
+  </script>
+</body>
+</html>

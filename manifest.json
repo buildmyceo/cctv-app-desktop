@@ -1,0 +1,64 @@
+{
+  "appId": "ceova-cctv",
+  "name": "CEOVA CCTV",
+  "version": "1.0.0",
+  "minSupportedVersion": "1.0.0",
+  "releaseNotes": "Official CEOVA CCTV Autonomous Surveillance Hub for Windows and MacBook.",
+  "releasedAt": "2026-10-21T16:14:24.000Z",
+  "platforms": {
+    "win32-x64": {
+      "packageUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-win-x64.exe",
+      "filename": "CEOVA-CCTV-1.0.0-win-x64.exe",
+      "size": 102199342,
+      "sha256": "c6010b477be25813cb3d4316267f5c3c3cdfa1e8fc363b68bb31a17c847352ee"
+    },
+    "windows-x64": {
+      "packageUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-win-x64.exe",
+      "filename": "CEOVA-CCTV-1.0.0-win-x64.exe",
+      "size": 102199342,
+      "sha256": "c6010b477be25813cb3d4316267f5c3c3cdfa1e8fc363b68bb31a17c847352ee"
+    },
+    "windows": {
+      "packageUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-win-x64.exe",
+      "filename": "CEOVA-CCTV-1.0.0-win-x64.exe",
+      "size": 102199342,
+      "sha256": "c6010b477be25813cb3d4316267f5c3c3cdfa1e8fc363b68bb31a17c847352ee"
+    },
+    "darwin-arm64": {
+      "packageUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      "filename": "CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      "size": 123269516,
+      "sha256": "32ffaf3abc37616d09187d4e655dbe0a49018a4cedda27111cc0e9b324cd2ec2"
+    },
+    "macos-aarch64": {
+      "packageUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      "filename": "CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      "size": 123269516,
+      "sha256": "32ffaf3abc37616d09187d4e655dbe0a49018a4cedda27111cc0e9b324cd2ec2"
+    },
+    "macos-arm64": {
+      "packageUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      "filename": "CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      "size": 123269516,
+      "sha256": "32ffaf3abc37616d09187d4e655dbe0a49018a4cedda27111cc0e9b324cd2ec2"
+    },
+    "macos-x64": {
+      "packageUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-x64.dmg",
+      "filename": "CEOVA-CCTV-1.0.0-mac-x64.dmg",
+      "size": 128861322,
+      "sha256": "ee4bc5ad844c2e7365c728fa0649e7bf84cae8f95621677085895f8dce1461a5"
+    },
+    "darwin-x64": {
+      "packageUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-x64.dmg",
+      "filename": "CEOVA-CCTV-1.0.0-mac-x64.dmg",
+      "size": 128861322,
+      "sha256": "ee4bc5ad844c2e7365c728fa0649e7bf84cae8f95621677085895f8dce1461a5"
+    },
+    "macos": {
+      "packageUrl": "https://github.com/buildmyceo/cctv-ceova/releases/download/v1.0.0/CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      "filename": "CEOVA-CCTV-1.0.0-mac-arm64.dmg",
+      "size": 123269516,
+      "sha256": "32ffaf3abc37616d09187d4e655dbe0a49018a4cedda27111cc0e9b324cd2ec2"
+    }
+  }
+}
